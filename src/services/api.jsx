@@ -1,18 +1,18 @@
 const getDataFromAPI = () => {
   return fetch(
-    'https://owen-wilson-wow-api.herokuapp.com/wows/random?results=50'
+    'https://owen-wilson-wow-api.onrender.com/wows/random?results=50'
   )
     .then((response) => response.json())
     .then((data) => {
-      const cleanData = data.results.map((movieData) => {
+      const cleanData = data.map((data, index) => {
         return {
-          movie: item.movie,
-          year: item.year,
-          director: item.director,
-          fullLine: item.full_line,
-          poster: item.poster,
-          audio: item.audio,
           id: index,
+          movie: data.movie,
+          year: data.year,
+          director: data.director,
+          fullLine: data.full_line,
+          poster: data.poster,
+          audio: data.audio,
         };
       });
       return cleanData;
@@ -20,3 +20,4 @@ const getDataFromAPI = () => {
 };
 
 export default getDataFromAPI;
+

@@ -1,28 +1,9 @@
-@media (min-width: 768px) {
-  .main {
-      display: grid;
-      grid-template-columns: 20rem 1fr;
-  }
-}
 
 .header {
   position: relative;
-  border-bottom: solid 0.1875rem #14d9c4;
-  padding-bottom: 0.3125rem;
-  margin-bottom: 1.25rem;
+  border-bottom: solid 1px grey;
+  padding-bottom: 3px;
+  margin-bottom: 12px;
 }
 
-.header .header--logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
-.loading_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 18rem;
-}
-  
