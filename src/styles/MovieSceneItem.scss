@@ -1,0 +1,37 @@
+.scene-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  
+    &__image {
+      width: 12rem;
+      border-radius: 8px; 
+    }
+  
+    &__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+      color: #333; 
+    }
+  
+    &__line {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #555; 
+    }
+  
+    &__year {
+      font-size: 1rem;
+      color: #888;
+    }
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+  }
+  

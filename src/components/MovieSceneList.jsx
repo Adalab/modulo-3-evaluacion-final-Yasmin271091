@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/MovieSceneList.scss';
 import MovieSceneItem from './MovieSceneItem';
 
 const MovieSceneList = ({ scenes }) => {

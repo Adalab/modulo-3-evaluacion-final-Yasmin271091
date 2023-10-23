@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../styles/Filters.scss';
 const Filters = ({
   handleFilterChange,
   handleYearChange,
