@@ -11,7 +11,7 @@ const FilterByYear = ({ yearFilter, handleChangeSelect, years }) => {
 
   return (
     <>
-      <label className='label' htmlFor='year'>
+      <label className='search-year' htmlFor='year'>
         Año de la película
         <select
           className='select'
@@ -20,7 +20,7 @@ const FilterByYear = ({ yearFilter, handleChangeSelect, years }) => {
           value={yearFilter}
           onChange={handleSelect}
         >
-          <option value='all'>Todos</option>
+          <option className='search-year__select' value='all'>Todos</option>
           {renderYearOptions}
         </select>
       </label>

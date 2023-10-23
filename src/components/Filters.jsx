@@ -7,33 +7,30 @@ const Filters = ({
   selectedYear,
   years,
 }) => {
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
-    <form className='filters'>
-      <div className='filter-group'>
-        <label htmlFor='movieFilter'>Buscar por película:</label>
+    <div className='filters'>
+      <form onSubmit={handleSubmit}>
         <input
           type='text'
-          id='movieFilter'
           value={searchText}
           onChange={handleFilterChange}
+          placeholder='Buscar por título'
         />
-      </div>
-      <div className='filter-group'>
-        <label htmlFor='yearFilter'>Filtrar por año:</label>
-        <select
-          id='yearFilter'
-          value={selectedYear}
-          onChange={handleYearChange}
-        >
-          <option value='all'>Todos</option>
+        <select value={selectedYear} onChange={handleYearChange}>
+          <option value='all'>Todos los años</option>
           {years.map((year) => (
             <option key={year} value={year}>
               {year}
             </option>
           ))}
         </select>
-      </div>
-    </form>
+        <button type='submit' style={{ display: 'none' }} />
+      </form>
+    </div>
   );
 };
 

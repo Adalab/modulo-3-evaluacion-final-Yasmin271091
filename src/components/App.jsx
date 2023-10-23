@@ -13,8 +13,8 @@ import MovieSceneDetail from './MovieSceneDetail';
 
 const App = () => {
   const [movieData, setMovieData] = useState(ls.get('movies') || []);
-  const [titleFilter, setTitleFilter] = useState('');
-  const [yearFilter, setYearFilter] = useState('all');
+  const [titleFilter, setTitleFilter] = useState(ls.get('titleFilter') || '');
+  const [yearFilter, setYearFilter] = useState(ls.get('yearFilter') || 'all');
 
   useEffect(() => {
     if (movieData.length === 0) {
@@ -26,11 +26,15 @@ const App = () => {
   }, []);
 
   const handleFilterChange = (ev) => {
-    setTitleFilter(ev.target.value);
+    const value = ev.target.value;
+    setTitleFilter(value);
+    ls.set('titleFilter', value);
   };
 
   const handleYearChange = (ev) => {
-    setYearFilter(ev.target.value);
+    const value = ev.target.value;
+    setYearFilter(value);
+    ls.set('yearFilter', value);
   };
 
   const filteredScenes = movieData.filter((scene) => {
@@ -41,13 +45,6 @@ const App = () => {
       .includes(titleFilter.toLowerCase());
     return yearMatch && titleMatch;
   });
-
-  const getYears = () => {
-    const years = filteredScenes.map((item) => item.year);
-    const uniquesYears = new Set(years);
-    const uniquesArray = [...uniquesYears];
-    return uniquesArray;
-  };
 
   const getUniqueYears = () => {
     const years = movieData.map((item) => item.year);
@@ -77,7 +74,11 @@ const App = () => {
                   selectedYear={yearFilter}
                   years={getUniqueYears()}
                 />
-                <MovieSceneList scenes={filteredScenes} />
+                 {filteredScenes.length > 0 ? (
+                  <MovieSceneList scenes={filteredScenes} />
+                ) : (
+                  <div>No hay ninguna nombre de película que coincida con la palabra {titleFilter}</div>
+                )}
               </>
             }
           />
