@@ -1,18 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/MovieSceneDetail.scss';
 
 const MovieSceneDetail = ({ clickedMovie }) => {
-
   return (
     <div className='clickedMovie-detail'>
-      <img src={clickedMovie.poster}alt={clickedMovie.movie} />
-      <h2>{clickedMovie.movie}</h2>
-      <p>Director: {clickedMovie.director}</p>
-      <p>Frase completa: {clickedMovie.fullLine}</p>
-      <a href={clickedMovie.audio} target='_blank' rel='noopener noreferrer'>
+      <img className='clickedMovie-detail__image'
+      src={clickedMovie.poster} alt={clickedMovie.movie}  />
+      <h2 className='clickedMovie-detail__title'>{clickedMovie.movie}</h2>
+      <p className='clickedMovie-detail__director'>Director: {clickedMovie.director}</p>
+      <p className='clickedMovie-detail__fullLine'>Frase completa: {clickedMovie.fullLine}</p>
+      <a
+        href={clickedMovie.audio}
+        target='_blank'
+        rel='noopener noreferrer'
+        className='clickedMovie-detail__audioLink'
+      >
         Enlace de audio
       </a>
-      <Link className='detail__back' to='/'>
+      <Link className='clickedMovie-detail__back' to='/'>
         <i className='fa-solid fa-arrow-left-long'></i> Volver
       </Link>
     </div>
@@ -20,6 +26,7 @@ const MovieSceneDetail = ({ clickedMovie }) => {
 };
 
 export default MovieSceneDetail;
+
 
 
 

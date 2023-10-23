@@ -13,14 +13,15 @@ const Filters = ({
 
   return (
     <div className='filters'>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <input
+        className='input'
           type='text'
           value={searchText}
           onChange={handleFilterChange}
           placeholder='Buscar por título'
         />
-        <select value={selectedYear} onChange={handleYearChange}>
+        <select className="select"value={selectedYear} onChange={handleYearChange}>
           <option value='all'>Todos los años</option>
           {years.map((year) => (
             <option key={year} value={year}>
@@ -28,7 +29,7 @@ const Filters = ({
             </option>
           ))}
         </select>
-        <button type='submit' style={{ display: 'none' }} />
+        <button className='button' type='submit' style={{ display: 'none' }} />
       </form>
     </div>
   );

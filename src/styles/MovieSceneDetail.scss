@@ -1,0 +1,57 @@
+
+.clickedMovie-detail {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    min-height: 400px;
+    padding: 20px 20px 35px 20px;
+    background-color: #85d9df;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+  
+    &__image {
+        width: 220px;
+    margin-bottom: 15px;
+    border: 3px solid #e9e1e1;
+    padding: 8px;
+   
+     
+    }
+  
+    &__title {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+  
+    &__director,
+    &__fullLine {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    &__audioLink {
+      display: block;
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #007bff; 
+      text-decoration: none;
+    }
+  
+    &__back {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1rem;
+      text-decoration: none;
+  
+      .fa-arrow-left-long {
+        margin-right: 5px;
+      }
+    }
+  }

@@ -6,14 +6,24 @@
   justify-items: center;
   align-items: center;
   list-style: none;
+  background-color: rgba(15, 52, 1, 0.2); 
+  padding: 1rem; 
+  
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    gap: 1.5rem;
   }
 
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+  }
+
+  .scene-card {
+    background-color: rgb(113, 224, 150);
+    padding: 1rem; 
+    border-radius: 0.25rem; 
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 1); 
   }
 }

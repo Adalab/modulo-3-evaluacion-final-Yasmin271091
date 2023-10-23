@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+    background-color: #92aa77; 
+    color: #0f0f0f; 
+    padding: 20px;
+  
+    &__title {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: bold;
+    }
+  
+    &__two {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+  }

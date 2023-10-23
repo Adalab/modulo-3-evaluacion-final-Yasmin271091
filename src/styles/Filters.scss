@@ -1,8 +1,30 @@
-.filters{
+.filters {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
-}
+    font-size: 1rem;
+    background-color: rgba(15, 52, 1, 0.2);
+    padding-bottom: 2rem;
+  
+    .form {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+  
+      .input[type="text"],
+      .select {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        flex: 1;
+        background-color: #fff;
+      }
+  
+      .button[type="submit"] {
+        display: none;
+      }
+    }
+  }
+  

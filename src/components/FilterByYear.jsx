@@ -1,3 +1,4 @@
+import '../styles/FilterByYear.scss';
 const FilterByYear = ({ yearFilter, handleChangeSelect, years }) => {
   const handleSelect = (ev) => {
     handleChangeSelect(ev.target.value);
@@ -14,14 +15,16 @@ const FilterByYear = ({ yearFilter, handleChangeSelect, years }) => {
       <label className='search-year' htmlFor='year'>
         Año de la película
         <select
-          className='select'
+          className='search-year__select'
           id='year'
           name='year'
           value={yearFilter}
           onChange={handleSelect}
         >
-          <option className='search-year__select' value='all'>Todos</option>
-          {renderYearOptions}
+          <option className='search-year__select--all' value='all'>
+            Todos
+          </option>
+          {renderYearOptions()}
         </select>
       </label>
     </>
