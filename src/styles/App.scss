@@ -5,5 +5,10 @@
   list-style: none;
 }
 
-
-
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15, 52, 1, 0.2);
+  height: 70vh;
+}

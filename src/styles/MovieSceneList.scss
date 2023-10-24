@@ -1,14 +1,13 @@
 .scene-list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 1rem;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
   justify-items: center;
   align-items: center;
   list-style: none;
-  background-color: rgba(15, 52, 1, 0.2); 
-  padding: 1rem; 
-  
+  background-color: rgba(15, 52, 1, 0.2);
+  padding: 1rem;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -21,9 +20,10 @@
   }
 
   .scene-card {
+    
     background-color: rgb(113, 224, 150);
-    padding: 1rem; 
-    border-radius: 0.25rem; 
-    box-shadow: 0 2px 4px rgba(1, 1, 1, 1); 
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 1);
   }
 }

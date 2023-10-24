@@ -77,7 +77,7 @@ const App = () => {
                  {filteredScenes.length > 0 ? (
                   <MovieSceneList scenes={filteredScenes} />
                 ) : (
-                  <div>No hay ninguna nombre de película que coincida con la palabra {titleFilter}</div>
+                  <div className='error'>No hay ningún nombre de película que coincida con la palabra {titleFilter}</div>
                 )}
               </>
             }

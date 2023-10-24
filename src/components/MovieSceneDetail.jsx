@@ -16,7 +16,7 @@ const MovieSceneDetail = ({ clickedMovie }) => {
         rel='noopener noreferrer'
         className='clickedMovie-detail__audioLink'
       >
-        Enlace de audio
+        Escuchar audio
       </a>
       <Link className='clickedMovie-detail__back' to='/'>
         <i className='fa-solid fa-arrow-left-long'></i> Volver
